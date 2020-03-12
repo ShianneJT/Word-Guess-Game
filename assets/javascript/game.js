@@ -1,47 +1,38 @@
-// Word Guess Game
-
-// Create list of words
-// User makes a guess
-// code checks if they entered an alpha character
-// then checks it against the chosen word
-// while keeping track of remaining letters, lives, and wins
-
+// Create a list of words
+// User presses a letter
+// It checks to see if that is correct
+// If correct it returns the word with the correct letters and underscores
+// ... and minuses from the letters remaining
+// If incorrect it minuses one from their guesses remaining and adds the letter to a letters guessed div
+// When no letters remain add one to the wins and start the game over
 
 // Word list
-    var officeCharacters = ["Michael Scott", "Pam Beesly", "Jim Halpert", "Dwight Schrute", 
-        "Stanley Hudson", "Kevin Malone", "Angela Martin", "Phylis Vance", "Bob Vance of Vance Refrigeration", 
-        "Meredith Palmer", "Creed Bratton", "Oscar Martinez", "Ryan Howard", "Kelly Kapoor", "Andy Bernard",
-        "Toby Flenderson", "Darryl Philbin", "Moes", "Jan Levinson", "David Wallace", "Robert California",
-        "Holly Flax", "Todd Packer"];
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var officeCharacters = ["michael scott", "pam beesly", "jim halpert", "dwight schrute",
+        "stanley hudson", "kevin malone", "angela martin", "phylis vance", "bob vance of vance refrigeration",
+        "meredith palmer", "creed bratton", "oscar martinez", "ryan howard", "kelly kapoor", "andy bernard",
+        "toby flenderson", "darryl philbin", "moes", "jan levinson", "david wallace", "robert california",
+        "holly flax", "todd packer"];
 
 // Selects a random character 
     var randomCharacter = officeCharacters[Math.floor(Math.random() * officeCharacters.length)];
-    var lettersRemaining = randomCharacter.length; // I don't know where I want this yet =P but here is probably an okay place
-    // Need to add wins, lives,
 
-// Blank answer
-    var answer = [];
-    for (i = 0; i < randomCharacter.length; i++) {
-        answer[i] = "_";
-    }
+    
 
-// Waiting on user input to start the game
+// Game Stats
+    var lives = 15;
+    var wins = 0;
+    var wrongGuesses = [];
+    var letters = [];
+
     document.onkeyup = function(event) {
-        letterChoice = event.key;
-            console.log(letterChoice); //remove
+        userChoice = event.key;
+        userChoice = userChoice.toLowerCase();
 
-// This checks to make sure the user entered a letter then proceeds with the game 
-// or displays a message on the screen alerting the user to select an alpha character only 
-    var letterCheck = alphabet.includes(letterChoice);
 
-    while (lettersRemaining > 0) {
-        if (letterCheck) {
-            break;
-        } else {
-            alert("Choose a letter from the alphabet.")
-           // console.log("Choose a letter from the alphabet.");  //display this somewhere on the page
-            break;
+    while (letters > 0) {
+        if (userChoice = randomCharacter) {
+
         }
+
     }    
-    }
+}
