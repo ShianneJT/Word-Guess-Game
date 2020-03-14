@@ -11,19 +11,15 @@
         "phylis", "meredith", "creed", "oscar", "ryan", "kelly", "andy", "toby", "darryl",
         "moes", "jan", "david", "robert", "holly"];
 
-// Selects a random character
-    
-   // console.log(`Random Character:  ${randomCharacter}`)
-
 // Game Stats
     var lives = 10;
     var losses = 0;
     var wins = 0;
-    var lettersGuessed = "";
-    
+    var lettersGuessed = "";    
 
     var livesLeft = document.getElementById("livesLeft");
 
+// Start new game - 
     function makeNewGame() {
         lives = 10;
         lettersGuessed = "";
@@ -35,9 +31,9 @@
 
         livesLeft.textContent = lives;
 
-        var randomCharacterArray = randomCharacter.split("");
+        var randomCharacterArray = randomCharacter.split("");       // .split creates an array of the individual characters of the randomCharacter var
         for (var x = 0; x < randomCharacterArray.length; x++) {
-            console.log(randomCharacterArray[x]);
+           // console.log(randomCharacterArray[x]);
            randomWordDiv.innerHTML += "<span id='letter_" + x +"'> _ </span>";
         }
         return randomCharacterArray;
@@ -46,18 +42,19 @@
     var randomCharacterArr = makeNewGame();
     var lettersLeft = randomCharacterArr.length;
 
-
+//  This executes when the user presses a key and assigns it to userChoice
     document.onkeyup = function(event) {
         userChoice = event.key;
-        console.log(lettersLeft);
+
+//  This checks to see if the userChoice/letter was already used and if not it continues with the next IF statement
         if(lettersGuessed.indexOf(userChoice) < 0){
-
-            if (event.keyCode >= 65 && event.keyCode <= 90) {
-
-                 lettersGuessed += userChoice;
+//  This checks to make sure the user entered a lowercase letter then adds the userChoice to the lettersGuessed string and HTML
+            if (event.keyCode >= 65 && event.keyCode <= 90) {   
+                lettersGuessed += userChoice;
                 var lettersGuessedDiv = document.getElementById("lettersGuessed");
-                lettersGuessedDiv.textContent = lettersGuessed;
-
+                lettersGuessedDiv.textContent = lettersGuessed;lettersGuessed
+//  If userChoice exists in randomCharacter
+//  ??
                 if(randomCharacterArr.indexOf(userChoice) > -1 ){
                     var pos = 0;
                     var i = -1;
@@ -70,16 +67,16 @@
                             lettersLeft--;
                         }
                     }
-                   
-                    // handle win
-
+//  If there are no more letters left, the user has won the game and the game starts over.
                     if(lettersLeft === 0){
                         randomCharacterArr = makeNewGame();
                         lettersLeft = randomCharacterArr.length;
                         wins++;
                         var winsCount = document.getElementById("wins");
                         winsCount.textContent = wins;
-                        alert("you win");
+                        // var winnerDiv = document.getElementById("winner");
+                        // winnerDiv.style.visibility = "visible";
+                        // winnerDiv.textContent = "You won!";
                     }
 
 
@@ -95,17 +92,12 @@
                     livesLeft.textContent = lives;
                 }
 
-
-               
-                
-
-
-                console.log("This is a letter");
             } else {
-                console.log("This is NOT a letter");
+                alert("Enter a letter");
+
+                //console.log("This is NOT a letter");
             }
         }
-
 }
 
 
