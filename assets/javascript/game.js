@@ -74,6 +74,7 @@
                         wins++;
                         var winsCount = document.getElementById("wins");
                         winsCount.textContent = wins;
+
                         // var winnerDiv = document.getElementById("winner");
                         // winnerDiv.style.visibility = "visible";
                         // winnerDiv.textContent = "You won!";

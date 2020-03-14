@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;    
+}
+
+body {
+    font-size: 16px;
+}
+
+header {
+    /* padding: 15px; */
+    /* background-color: #19c0f5; */    
+} 
+
+.jumbotron {    
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;       
+}
+
+#logo {
+    width: 960px;
+    height: 270px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+.main {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: lightpink;
+}
+
+
+.title {
+    font-weight: bold;
+    margin: auto;
+}
+
+/* col {
+    column-rule-style: dotted;
+
+    
+} */
+
+.stats {
+    background-color: magenta;
+}
+
+
+h1 {    
+    margin-bottom: 0px;
+    text-align: center;    
+}
+
