@@ -3,14 +3,19 @@
 }
 
 body {
-    
+    background-image: url(../images/exclusive_paper.png);
+    font-size: 20px;
     min-width: 480px;
 }
 
 header {
     background-color: lightblue;
     margin-bottom: 40px;
-    padding: 15px;
+}
+
+/* change */
+hr {
+    border-top: 2px solid black; 
 }
 
 #logo {
@@ -28,8 +33,10 @@ h1 {
     padding: 30px;
     min-width: 480px;
     max-width: 95%;
-    justify-content: center;
-    background-color: lightgreen;
+}
+
+#main {
+    justify-content: space-around; 
 }
 
 .row {
@@ -39,14 +46,15 @@ h1 {
 }
 
 .col {
-    display: block;    
+    background-color: rgb(173, 216, 230, .3);
+    display: block;
+    padding-top: 10px;
     padding-bottom: 10px;
     min-width: 430px;
 }
 
 #colOne {    
-    align-items: center;    
-    background-color: green;
+    align-items: center;
 }
 
 #pageImage {
@@ -56,15 +64,19 @@ h1 {
     max-height: 100%;
 }
 
-#colTwo {
-    max-width: 240px;
-    min-width: 240px;
+#colTwo {    
+    max-width: 280px;
 
-    background-color: lightblue;
 }
 
-#colThree {    
-    background-color: purple;
+#colThree { 
+
+}
+
+#randomWord {
+    letter-spacing: 8px;
+    font-size: 20px;
+    justify-content: center;
 }
 
 
@@ -83,7 +95,6 @@ h1 {
 @media all and (max-width: 980px) { ... }
 @media all and (max-width: 736px) { ... }
 @media all and (max-width: 480px) { ... }
-
 */
 
 
@@ -95,47 +106,34 @@ header {
     /* padding: 15px; */
     /* background-color: #19c0f5;    
 } 
-
 .jumbotron {    
     padding-top: 0px;
     padding-bottom: 20px;
     margin-bottom: 40px;       
 }
-
-
-
 .container {
     width: 1000px;
     margin: auto;
 }
-
  .main {
     width: 1000px;
     margin: auto;
     padding: 20px;
     background-color: lightpink;
 } 
-
-
 .title {
     font-weight: bold;
     width: 100%;
 }
-
 col {
     column-rule-style: dotted;
-
     
 } 
-
 .stats {
     background-color: magenta;
 }
-
-
 h1 {    
     margin-bottom: 0px;
     text-align: center;    
 }
-
-*/
+*

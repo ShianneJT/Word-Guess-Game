@@ -15,20 +15,21 @@
 <header>
         <img id="logo" src="assets/images/theoffice.png" alt="The Office Logo">
         <h1>The Office Hangman</h1>
+        <hr>
 </header>
 
 <!-- Main page content -->
-    <div class="container">
-        <div class="row row-cols-3">
+    <div class="container rounded">
+        <div class="row row-cols-3" id="main">
             <!-- Column One -->
-            <div class="col" id="colOne"><img id="pageImage" src="https://loremflickr.com/400/300/cat"></div>
+            <div class="col border" id="colOne"><img id="pageImage" src="https://loremflickr.com/400/300/cat"></div>
             <!-- Column Two -->
-            <div class="col" id="colTwo"><h3>Game Stats</h3>
+            <div class="col border" id="colTwo"><h4>Game Stats</h4>
             <hr>
                 <div class="row">Wins: </div>
                 <div class="row" id="wins"></div>
                 <hr>
-                <div class="row"><span>Losses: </span></div>
+                <div class="row">Losses: </div>
                 <div class="row" id="losses"></div>
                 <hr>
                 <div class="row">Lives Left: </div>
@@ -36,11 +37,12 @@
                 <hr>
             </div>
             <!-- Column Three -->            
-            <div class="col" id="colThree"><h4>Press any letter to start!</h4>
+            <div class="col border" id="colThree"><h4>Press any letter to start!</h4>
             <hr>
                 <div class="row" id="randomWord"></div>
                 <hr>
-                <div class="row" id="lettersGuessed"></div>
+                <div class="row">Letters Guessed: </div>
+                <div class="row" id="lettersGuessed"></div>                
             </div>
         </div>
     </div>
