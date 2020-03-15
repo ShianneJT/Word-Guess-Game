@@ -6,23 +6,66 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Word Guess Game</title>
+    <title>The Office Hangman Game</title>
 </head>
 <body>
+
+<!-- Header -->
+<div class="wrapper">
 <header>
-    <div class="jumbotron">
-        <div class="container">
-            <img id="logo" src="assets/images/theoffice.png" alt="The Office Logo">
-            <h1>The Office Hangman</h1>
-        </div>
-    </div>
+        <img id="logo" src="assets/images/theoffice.png" alt="The Office Logo">
+        <h1>The Office Hangman</h1>
 </header>
 
-    <div class="main">
+<!-- Main page content -->
+    <div class="container">
+        <div class="row row-cols-3">
+            <!-- Column One -->
+            <div class="col" id="colOne"><img id="pageImage" src="https://loremflickr.com/400/300/cat"></div>
+            <!-- Column Two -->
+            <div class="col" id="colTwo"><h3>Game Stats</h3>
+            <hr>
+                <div class="row">Wins: </div>
+                <div class="row" id="wins"></div>
+                <hr>
+                <div class="row"><span>Losses: </span></div>
+                <div class="row" id="losses"></div>
+                <hr>
+                <div class="row">Lives Left: </div>
+                <div class="row" id="livesLeft"></div>
+                <hr>
+            </div>
+            <!-- Column Three -->            
+            <div class="col" id="colThree"><h4>Press any letter to start!</h4>
+            <hr>
+                <div class="row" id="randomWord"></div>
+                <hr>
+                <div class="row" id="lettersGuessed"></div>
+            </div>
+        </div>
+    </div>
+</div> <!--End of .wrapper--> 
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <img src="https://loremflickr.com/400/300/cat">
+            </div>
+            <div class="col-md">
+                Game Stats
+            </div>
+            <div class="col-md">
+                Press any letter to start!
+            </div>
+        </div>
+    </div> -->
+    
+
+<!-- 
     <div class="row row no gutters">
         <div class="col md-4 img"><img src="https://loremflickr.com/400/300/cat"></div>
         <div class="col md-3 stats">
-            <row class="title">Game Stats</row>
+            <row class="title block text-center">Game Stats</row>
             <hr>
             <row class="title">Wins: </row>
             <row><div id="wins"></div></row>
@@ -43,7 +86,7 @@
             <row><div id="lettersGuessed"></div></row>
         </div> 
     </div>
-    </div>
+    </div> -->
 
 
 
@@ -56,30 +99,24 @@
             <hr>
             <row class="title">Letters Guessed: <div id="lettersGuessed"></div></div></row> -->
             
-        
-
-
-
-
-
+ 
         <!-- <div class="col-md-5">
             <img src="https://loremflickr.com/400/300/cat">
         </div>
         <div class="col-md-3 mr-1"><h5>Game Stats:</h5></div>
         <div class="col-md-4"><h4>Press any letter to start!</h4></div>
         <hr> -->
-    </div>
-    </div>
+ 
     
 
     <!-- <div id="warning" style="display: hidden">Test</div> -->
-    <div id="randomWord"></div>
+    <!-- <div id="randomWord"></div>
     <div id="livesLeft"></div>
     <div id="losses">Losses: </div>
     <div id="wins">Wins: </div>
     <div id="lettersGuessed">Letters guessed: </div>
-    <div id="winner">This shouldn't show up!</div>
-</div>
+    <div id="winner">This shouldn't show up!</div> -->
+
 
 <footer>
 

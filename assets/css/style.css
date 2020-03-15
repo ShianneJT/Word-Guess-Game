@@ -3,12 +3,97 @@
 }
 
 body {
-    font-size: 16px;
+    
+    min-width: 480px;
 }
 
 header {
+    background-color: lightblue;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+#logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 75%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    min-width: 480px;
+    max-width: 95%;
+    justify-content: center;
+    background-color: lightgreen;
+}
+
+.row {
+    margin: auto;
+    text-align: center;
+    flex-wrap: wrap-reverse;
+}
+
+.col {
+    display: block;    
+    padding-bottom: 10px;
+    min-width: 430px;
+}
+
+#colOne {    
+    align-items: center;    
+    background-color: green;
+}
+
+#pageImage {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#colTwo {
+    max-width: 240px;
+    min-width: 240px;
+
+    background-color: lightblue;
+}
+
+#colThree {    
+    background-color: purple;
+}
+
+
+
+/* Media Queries */
+/* @media all and (max-width: 1690px) {
+    .wrapper {
+        width: 100%;
+    }
+    .header {
+        height: 30%;
+    } 
+} */
+
+/* @media all and (max-width: 1280px) { ...}
+@media all and (max-width: 980px) { ... }
+@media all and (max-width: 736px) { ... }
+@media all and (max-width: 480px) { ... }
+
+*/
+
+
+
+
+
+/*
+header {
     /* padding: 15px; */
-    /* background-color: #19c0f5; */    
+    /* background-color: #19c0f5;    
 } 
 
 .jumbotron {    
@@ -17,36 +102,31 @@ header {
     margin-bottom: 40px;       
 }
 
-#logo {
-    width: 960px;
-    height: 270px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
+
 
 .container {
     width: 1000px;
     margin: auto;
 }
 
-.main {
+ .main {
     width: 1000px;
     margin: auto;
     padding: 20px;
     background-color: lightpink;
-}
+} 
 
 
 .title {
     font-weight: bold;
-    margin: auto;
+    width: 100%;
 }
 
-/* col {
+col {
     column-rule-style: dotted;
 
     
-} */
+} 
 
 .stats {
     background-color: magenta;
@@ -58,3 +138,4 @@ h1 {
     text-align: center;    
 }
 
+*/
