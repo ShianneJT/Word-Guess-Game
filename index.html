@@ -15,16 +15,17 @@
 <header>
         <img id="logo" src="assets/images/theoffice.png" alt="The Office Logo">
         <h1>The Office Hangman</h1>
-        <hr>
+        <hr id="hrHeader">
 </header>
 
-<!-- Main page content -->
+<!-- Page content -->
+        <div class="winnerDiv"> Woo you're a winner! </div>
     <div class="container rounded">
         <div class="row row-cols-3" id="main">
             <!-- Column One -->
-            <div class="col border" id="colOne"><img id="pageImage" src="https://loremflickr.com/400/300/cat"></div>
+            <div class="col" id="colOne"><img id="pageImage" src="https://loremflickr.com/400/300/cat"></div>
             <!-- Column Two -->
-            <div class="col border" id="colTwo"><h4>Game Stats</h4>
+            <div class="col" id="colTwo"><h5>Game Stats</h5>
             <hr>
                 <div class="row">Wins: </div>
                 <div class="row" id="wins"></div>
@@ -37,88 +38,19 @@
                 <hr>
             </div>
             <!-- Column Three -->            
-            <div class="col border" id="colThree"><h4>Press any letter to start!</h4>
+            <div class="col" id="colThree"><h5>Press any letter to start!</h5>
             <hr>
                 <div class="row" id="randomWord"></div>
                 <hr>
                 <div class="row">Letters Guessed: </div>
                 <div class="row" id="lettersGuessed"></div>                
-            </div>
+            </div>            
         </div>
+        <div class="row"></div>
     </div>
 </div> <!--End of .wrapper--> 
 
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md">
-                <img src="https://loremflickr.com/400/300/cat">
-            </div>
-            <div class="col-md">
-                Game Stats
-            </div>
-            <div class="col-md">
-                Press any letter to start!
-            </div>
-        </div>
-    </div> -->
     
-
-<!-- 
-    <div class="row row no gutters">
-        <div class="col md-4 img"><img src="https://loremflickr.com/400/300/cat"></div>
-        <div class="col md-3 stats">
-            <row class="title block text-center">Game Stats</row>
-            <hr>
-            <row class="title">Wins: </row>
-            <row><div id="wins"></div></row>
-            <hr>
-            <row class="title">Losses: </row>
-            <row><div id="losses"></div></row>
-            <hr>
-            <row class="title">Guesses Remaining: </row>
-            <row><div id="livesLeft"></div></row>
-
-        </div>
-        <div class="col md-5 gameArea">
-            <row class="title">Press any letter to start!</row>
-            <hr>
-            <row><div id="randomWord"></div></row>
-            <hr>
-            <row class="title">Letters Guessed: </row>
-            <row><div id="lettersGuessed"></div></row>
-        </div> 
-    </div>
-    </div> -->
-
-
-
-
-            <!-- <row class="title">Wins : </row>
-            <hr>
-            <row class="title">Losses: <div id="losses"></div></row>
-            <hr>
-            <row class="title">Guesses Remaining: <div id="livesLeft"></div></row>
-            <hr>
-            <row class="title">Letters Guessed: <div id="lettersGuessed"></div></div></row> -->
-            
- 
-        <!-- <div class="col-md-5">
-            <img src="https://loremflickr.com/400/300/cat">
-        </div>
-        <div class="col-md-3 mr-1"><h5>Game Stats:</h5></div>
-        <div class="col-md-4"><h4>Press any letter to start!</h4></div>
-        <hr> -->
- 
-    
-
-    <!-- <div id="warning" style="display: hidden">Test</div> -->
-    <!-- <div id="randomWord"></div>
-    <div id="livesLeft"></div>
-    <div id="losses">Losses: </div>
-    <div id="wins">Wins: </div>
-    <div id="lettersGuessed">Letters guessed: </div>
-    <div id="winner">This shouldn't show up!</div> -->
-
 
 <footer>
 
