@@ -63,6 +63,7 @@ h1 {
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    max-width: 450px;
     min-width: 430px;
     box-shadow: 8px 8px 5px grey;
 }

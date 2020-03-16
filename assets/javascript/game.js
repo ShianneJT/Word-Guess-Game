@@ -97,7 +97,6 @@
         }
 }
 
-
 // var officeCharacters = ["michael scott", "pam beesly", "jim halpert", "dwight schrute",
 // "stanley hudson", "kevin malone", "angela martin", "phylis vance", "bob vance of vance refrigeration",
 // "meredith palmer", "creed bratton", "oscar martinez", "ryan howard", "kelly kapoor", "andy bernard",
