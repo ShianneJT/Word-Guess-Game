@@ -15,11 +15,10 @@
     var lives = 10;
     var losses = 0;
     var wins = 0;
-    var lettersGuessed = "";    
-
+    var lettersGuessed = "";
     var livesLeft = document.getElementById("livesLeft");
 
-// Start new game - 
+// Start new game - Resets lives
     function makeNewGame() {
         lives = 10;
         lettersGuessed = "";
@@ -46,15 +45,15 @@
     document.onkeyup = function(event) {
         userChoice = event.key;
 
-//  This checks to see if the userChoice/letter was already used and if not it continues with the next IF statement
+//  This checks to see if the userChoice/letter was already used and if not it continues with the next if statement
         if(lettersGuessed.indexOf(userChoice) < 0){
 //  This checks to make sure the user entered a lowercase letter then adds the userChoice to the lettersGuessed string and HTML
-            if (event.keyCode >= 65 && event.keyCode <= 90) {   
+            if (event.keyCode >= 65 && event.keyCode <= 90) {
                 lettersGuessed += userChoice;
                 var lettersGuessedDiv = document.getElementById("lettersGuessed");
                 lettersGuessedDiv.textContent = lettersGuessed;lettersGuessed
+
 //  If userChoice exists in randomCharacter
-//  ??
                 if(randomCharacterArr.indexOf(userChoice) > -1 ){
                     var pos = 0;
                     var i = -1;
@@ -67,45 +66,36 @@
                             lettersLeft--;
                         }
                     }
-//  If there are no more letters left, the user has won the game and the game starts over.
+//  If there are no more letters left, the user has won the game and the game starts over
                     if(lettersLeft === 0){
                         randomCharacterArr = makeNewGame();
                         lettersLeft = randomCharacterArr.length;
                         wins++;
                         var winsCount = document.getElementById("wins");
                         winsCount.textContent = wins;
-
-                        // var winnerDiv = document.getElementById("winner");
-                        // winnerDiv.style.visibility = "visible";
-                        // winnerDiv.textContent = "You won!";
+                        alert('You win!')
                     }
 
-
+//  If there are no more lives left, the user has lost the game and the game starts over
                 } else {
-                    if(lives === 0){                    
+                    if(lives === 0){
                         randomCharacterArr = makeNewGame();
                         lettersLeft = randomCharacterArr.length;
                         losses++;
                         var lossesCount = document.getElementById("losses");
                         lossesCount.textContent = losses;
+                        alert('You lost :( Type a letter to play again.')
+                        // The lives drops to 9 after a loss and this is my workaround for now
+                        lives++
                     }
                     lives--;
                     livesLeft.textContent = lives;
                 }
-
             } else {
                 alert("Enter a letter");
-
-                //console.log("This is NOT a letter");
             }
         }
 }
-
-
-
-
-
-
 
 
 // var officeCharacters = ["michael scott", "pam beesly", "jim halpert", "dwight schrute",
