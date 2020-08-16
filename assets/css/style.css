@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+.alphabet-container {
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 3em;
+    background-color: #abcdef;
+    color: white;
+    cursor: pointer;
+  }
+
+  .inactive {
+    color: grey;
+    cursor: default;
+  }
+
 body {
     background-image: url(../images/exclusive_paper.png);
     font-family: "Helvetica", "Arial", "sans-serif";
