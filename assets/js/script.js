@@ -42,12 +42,22 @@ console.log("Random character: " + randomCharacter);
 // display the random character to the dom with letters hidden
 const hiddenWordDisplay = randomCharacter.split("");
 
+// for (let i = 0; i < hiddenWordDisplay.length; i++) {
+//   if (hiddenWordDisplay[i] === " ") {
+//     $("#wordContainer").append("<span id='space'> - </span>");
+
+//   } else {
+//     $("#wordContainer").append("<span id='letter_" + i + "'> _ </span>");
+//   }
+// }
+
 for (let i = 0; i < hiddenWordDisplay.length; i++) {
   if (hiddenWordDisplay[i] === " ") {
-    $("#wordContainer").append("<span id='space'> - </span>");
+    // $("#wordContainer").append("<span id='space'> - </span>");
+    $("#wordContainer").append("<li id='space'> - </li>");
 
   } else {
-    $("#wordContainer").append("<span id='letter_" + i + "'> _ </span>");
+    $("#wordContainer").append("<li id='letter_" + i + "'> _ </li>");
   }
 }
 
