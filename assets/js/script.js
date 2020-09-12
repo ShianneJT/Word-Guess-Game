@@ -87,7 +87,7 @@ $(".letterBtn").click(function () {
         $(letter).replaceWith(guess);
         lettersRemaining--;
         if (lettersRemaining == 0) {
-          checkWin();
+          // checkWin();
         }
         //$("#lettersLeft").html("<span>Letters Left: " + lettersRemaining + "</span>");
 
@@ -102,10 +102,11 @@ $(".letterBtn").click(function () {
       lives--;
       $("#livesLeft").html("<span>Lives: " + lives + "</span>");
       if (lives === 0) {
-        checkWin();
+        // checkWin();
       }
+      // checkWin();
   }
-  //checkWin();
+  checkWin();
 });
 
 checkWin = () => {
@@ -114,11 +115,13 @@ checkWin = () => {
     console.log("you lost...")
     losses++;
     $("#losses").html("<span>Losses: " + losses + "</span>");
+    $("#alphabetContainer").hide();
   } else if  (lives > 0 && lettersRemaining == 0) {
     console.log("you won...")
     alert("you won...")
     wins++;
     $("#wins").html("<span>Wins: " + wins + "</span>");
+    $("#alphabetContainer").hide();
   }
 }
 
