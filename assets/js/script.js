@@ -33,7 +33,6 @@ console.log("Random character: " + randomCharacter);
 
 // display the random character to the dom with letters hidden
 const hiddenWordDisplay = randomCharacter.split("");
-console.log('hiddenWord: ' + hiddenWordDisplay)
 
 for (let i = 0; i < hiddenWordDisplay.length; i++) {
   if (hiddenWordDisplay[i] === " ") {
@@ -45,6 +44,41 @@ for (let i = 0; i < hiddenWordDisplay.length; i++) {
 }
 
 console.log('hidden word display: ' + hiddenWordDisplay);
+
+// create an array of letters from character
+const letters = randomCharacter.split("");
+const letterArray = letters.filter(letter => letter.trim().length > 0);
+//console.log("letterArray: " + letterArray);
+
+// handle button click
+$(".letterBtn").click(function () {
+
+  let guess = $(this).val();
+  console.log("Guess: " + guess);
+
+  if (letters.indexOf(guess) !== -1) {
+    let pos = 0;
+    let i = -1;
+    while (pos !== -1) {
+      pos = letters.indexOf(guess, i + 1);
+      i = pos;
+
+      let letter = $("#letter_" + i);
+
+      if (letter !== " - "){
+        $(letter).replaceWith(guess);
+
+      };
+
+
+
+
+
+
+    };
+  }
+});
+
 
 
 
