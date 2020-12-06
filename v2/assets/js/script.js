@@ -5,6 +5,7 @@ let lives = 5;
 let lettersArray = [];
 
 $("#newGameBtn").hide();
+$("#gameContainer").hide();
 $("#wins").html("<span>Wins: " + wins + "</span>");
 $("#losses").html("<span>Losses: " + losses + "</span>");
 $("#livesLeft").html("<span>Lives: " + lives + "</span>");
@@ -57,6 +58,7 @@ let lettersRemaining = lettersFiltered.length;
 // handle button click
 $("#startBtn").click(function () {
   $("#startBtn").hide();
+  $("#gameContainer").show();
   createButtons();
   displayCharacter();
 
@@ -92,14 +94,19 @@ $("#startBtn").click(function () {
 
 checkWin = () => {
   if (lives == 0) {
-    alert("you lost...")
+    $("#winnerModal").modal("show");
+    $("#won").hide();
     console.log("you lost...")
     losses++;
     $("#losses").html("<span>Losses: " + losses + "</span>");
-    $("#alphabetContainer").hide();
+    $("#startBtn").show();
+    //$("#alphabetContainer").hide();
   } else if (lives > 0 && lettersRemaining == 0) {
+    $("#winnerModal").modal("show");
+    $("#lost").hide();
+
     console.log("you won...")
-    alert("you won...")
+    // alert("you won...")
     wins++;
     $("#wins").html("<span>Wins: " + wins + "</span>");
     $("#alphabetContainer").hide();
