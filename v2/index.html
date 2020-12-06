@@ -24,49 +24,25 @@
   </button> -->
 
   <!-- The Modal -->
-  <div class="modal fade" id="winnerModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="gameOverModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" id="won">
+      <div class="modal-content">
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1 class="modal-title"></h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
 
         <!-- Modal body -->
-        <div class="modal-body" id="winner">
-          You win!
-        </div>
+        <div class="modal-body" id="modalBody"></div>        
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-      <div class="modal-content" id="lost">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Modal body -->
-
-        <div class="modal-body" id="loser">
-          You lost :(
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger playAgain newGame" data-dismiss="modal"></button>
         </div>
 
       </div>
-
-
     </div>
   </div>
 
@@ -78,14 +54,16 @@
 
   <div id="stats">
     <ul>
-      <li id="wins">Wins: </li>
-      <li id="losses">Losses: </li>
-      <li id="livesLeft">Lives Remaining: </li>
+      <li id="wins"></li>
+      <li id="losses"></li>
+      <li id="livesLeft"></li>
     </ul>
   </div>
 
+  
+
   <div class="">
-    <button id="startBtn" class="btn btn-light mx-auto">Click Here to Start!</button>
+    <button id="startBtn" class="btn btn-light mx-auto startBtn">Click Here to Start!</button>
     <!-- <button id="newGameBtn" class="btn btn-light">Play Again!</button> -->
     <!-- <button id="resetStatsBtn" class="btn btn-light">Reset Stats</button> -->
   </div>
@@ -99,7 +77,9 @@
 
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/images.js"></script>
+
 
 </body>
 
