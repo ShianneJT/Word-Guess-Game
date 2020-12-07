@@ -28,7 +28,7 @@ const startGame = () => {
   // grab random character
   let randomCharacterName = officeCharacters[Math.floor(Math.random() * officeCharacters.length)];
   let randomCharacter = randomCharacterName.toUpperCase();
-  console.log("Random character: " + randomCharacter);
+  // console.log("Random character: " + randomCharacter);
 
   // create alphabet buttons
   const createButtons = () => {
@@ -55,7 +55,7 @@ const startGame = () => {
         $("#wordContainer").append("<span id='letter_" + i + "'> _ </span>");
       };
     };
-    console.log('hidden word display: ' + hiddenWordDisplay);
+    // console.log('hidden word display: ' + hiddenWordDisplay);
   };
 
   // create an array of letters from character
@@ -103,13 +103,11 @@ const startGame = () => {
       gameWon = false;
       $("#losses").html("<span>Losses: " + losses + "</span>");
       launchModal();
-      console.log("you lost...");
     } else if (lives > 0 && lettersRemaining == 0) {
       wins++;
       gameWon = true;
       $("#wins").html("<span>Wins: " + wins + "</span>");
       launchModal();
-      console.log("you won...");
     };
   };
 
