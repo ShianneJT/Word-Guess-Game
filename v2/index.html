@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="https://kit.fontawesome.com/a5bfd812ad.js" crossorigin="anonymous"></script>
@@ -18,24 +18,20 @@
     <h3 class="mx-3">Hangman</h3>
   </div>
 
-  <!-- Button to Open the Modal -->
-  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Open modal
-  </button> -->
-
   <!-- The Modal -->
-  <div class="modal fade" id="gameOverModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="gameOverModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
         <!-- Modal Header -->
         <div class="modal-header">
           <h1 class="modal-title"></h1>
-          <button type="button" class="close" data-dismiss="modal">×</button>
+          <!-- <button type="button" class="close" data-dismiss="modal">×</button> -->
         </div>
 
         <!-- Modal body -->
-        <div class="modal-body" id="modalBody"></div>        
+        <div class="modal-body" id="modalBody"></div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -46,11 +42,7 @@
     </div>
   </div>
 
-  <!-- <div id="stats">
-  <div id="wins"><p>Wins: </p></div>
-  <div id="losses"><p>Losses: </p></div>
-  <div id="livesLeft"><p></p></div>
-</div> -->
+
 
   <div id="stats">
     <ul>
@@ -60,10 +52,10 @@
     </ul>
   </div>
 
-  
+
 
   <div class="">
-    <button id="startBtn" class="btn btn-light mx-auto startBtn">Click Here to Start!</button>
+    <button id="startBtn" class="btn btn-primary mx-auto startBtn">Click Here to Start!</button>
     <!-- <button id="newGameBtn" class="btn btn-light">Play Again!</button> -->
     <!-- <button id="resetStatsBtn" class="btn btn-light">Reset Stats</button> -->
   </div>
@@ -78,8 +70,6 @@
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <script src="assets/js/images.js"></script>
-
 
 </body>
 

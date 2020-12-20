@@ -1,7 +1,7 @@
 // setup
 let wins = 0;
 let losses = 0;
-let lives = 5;
+let lives = 10;
 let lettersArray = [];
 let gameWon = false;
 
@@ -16,19 +16,15 @@ const startGame = () => {
   $("#startBtn").hide();
   $("#gameContainer div").empty();
 
-  let i = (Math.floor(Math.random() * 21) + 1);
-  imgSrc = "assets/images/office" + i + ".jpg"
-
   const officeCharacters = ["Michael Scott", "Pam Beesly", "Jim Halpert", "Dwight Schrute",
-    "Stanley Hudson", "Kevin Malone", "Angela Martin", "Phylis Vance",
+    "Stanley Hudson", "Kevin Malone", "Angela Martin", "Phyllis Vance",
     "Meredith Palmer", "Creed Bratton", "Oscar Martinez", "Ryan Howard", "Kelly Kapoor", "Andy Bernard",
-    "Toby Flenderson", "Darryl Philbin", "Moes", "Jan Levinson", "David Wallace", "Robert California",
-    "Holly Flax", "Todd Packer", "Bob Vance of Vance Refrigeration"];
+    "Toby Flenderson", "Darryl Philbin", "Jan Levinson", "David Wallace", "Robert California",
+    "Holly Flax", "Todd Packer"]; //"Bob Vance of Vance Refrigeration, Mose"
 
   // grab random character
   let randomCharacterName = officeCharacters[Math.floor(Math.random() * officeCharacters.length)];
   let randomCharacter = randomCharacterName.toUpperCase();
-  // console.log("Random character: " + randomCharacter);
 
   // create alphabet buttons
   const createButtons = () => {
@@ -55,7 +51,6 @@ const startGame = () => {
         $("#wordContainer").append("<span id='letter_" + i + "'> _ </span>");
       };
     };
-    // console.log('hidden word display: ' + hiddenWordDisplay);
   };
 
   // create an array of letters from character
@@ -112,8 +107,7 @@ const startGame = () => {
   };
 
   const launchModal = () => {
-    $("#modalBody").html('<img src="' + imgSrc + '">');
-
+    displayGifs();
 
     if (gameWon) {
       $(".modal-title").text("You got it!");
@@ -123,20 +117,45 @@ const startGame = () => {
       $(".modal-title").text("Sorry! The character was " + randomCharacterName);
       $(".newGame").text("Try Again?");
       $("#gameOverModal").modal("show");
-    }
-  }
-}
+    };
+  };
+
+  const displayGifs = () => {
+    $("#modalBody").empty();
+
+    //
+    //
+    //
+
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + randomCharacterName + "&api_key=" + giphyKey;
+    let gifNum = Math.floor(Math.random() * 6);
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (res) {
+      let results = res.data;
+
+      let gifDiv = $("<div>");
+      let charGif = $("<img>");
+      charGif.attr("src", results[gifNum].images.original.url);
+
+      gifDiv.append(charGif);
+      $("#modalBody").append(gifDiv);
+    });
+  };
+};
 
 // handle button click
 $(".startBtn, .playAgain").click(function () {
-  lives = 5;
+  lives = 10;
   $("#livesLeft").html("<span>Lives Remaining: " + lives + "</span>");
   startGame();
 });
 
 // characters
 // const officeCharacters = ["michael scott", "pam beesly", "jim halpert", "dwight schrute",
-//   "stanley hudson", "kevin malone", "angela martin", "phylis vance",
+//   "stanley hudson", "kevin malone", "angela martin", "phyllis vance",
 //   "meredith palmer", "creed bratton", "oscar martinez", "ryan howard", "kelly kapoor", "andy bernard",
 //   "toby flenderson", "darryl philbin", "moes", "jan levinson", "david wallace", "robert california",
 //   "holly flax", "todd packer", "bob vance of vance refrigeration"];
