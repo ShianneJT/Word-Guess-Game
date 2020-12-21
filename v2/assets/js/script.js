@@ -122,10 +122,8 @@ const startGame = () => {
 
   const displayGifs = () => {
     $("#modalBody").empty();
-
-    //
-    //
-    //
+ 
+    const giphyKey = "jeNtNzOLOIjvgsW8XsqubMLndTig1AXs";
 
     let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + randomCharacterName + "&api_key=" + giphyKey;
     let gifNum = Math.floor(Math.random() * 6);
