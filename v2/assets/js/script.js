@@ -13,7 +13,7 @@ $("#livesLeft").html("<span>Lives Remaining: " + lives + "</span>");
 
 
 const startGame = () => {
-  $("#startBtn").hide();
+  $("#startArea").hide();
   $("#gameContainer div").empty();
 
   const officeCharacters = ["Michael Scott", "Pam Beesly", "Jim Halpert", "Dwight Schrute",
@@ -34,8 +34,8 @@ const startGame = () => {
       let letterButton = $("<button onclick='this.disabled = true;'>");
       letterButton.text(char);
       letterButton.val(char);
-      letterButton.addClass("btn btn-primary letterBtn");
-
+      letterButton.addClass("btn btn-lg m-2 letterBtn");
+      // letterButton.addClass("btn btn-primary btn-lg m-2 letterBtn");
       $("#alphabetContainer").append($(letterButton));
     };
   };

@@ -7,13 +7,25 @@
 */
 
 body {
-
+    background-image: url("../images/exclusive_paper.png");
 }
 
 
 .jumbotron {
+    max-height: 300px;
     margin-bottom: 0px;
-    background-color: lightblue;
+    padding: 2rem;
+    background-color: #afdbf6;
+}
+
+h1 {
+    letter-spacing: 2px
+
+}
+
+h1, h2 {
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
 }
 
 ul {
@@ -33,9 +45,45 @@ li {
     text-decoration: none;
 }
 
-@media (min-width: 576px) {
-    
+.game-area {
+    /* position: relative; */
+    font-size: 20px;
+    letter-spacing: 3px;
 }
+
+.startBtn {
+    /* position: absolute;
+    left: 50%; */
+    background-color: #afdbf6;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.office-image {
+    max-width: 90%;
+}
+
+#wordContainer {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.letterBtn {
+    background-color: #afdbf6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.letterBtn:disabled {
+    background-color: white;
+    font-weight: normal;
+}
+
+/* @media (min-width: 576px) {
+    .jumbotron {
+        font-size: 5px;
+    }
+} */
 
 /* // Small devices (landscape phones, 576px and up) 
 @media (min-width: 576px) { ... }
