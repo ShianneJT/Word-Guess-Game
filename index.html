@@ -1,59 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/a5bfd812ad.js" crossorigin="anonymous"></script>
-    <title>The Office Hangman Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a5bfd812ad.js" crossorigin="anonymous"></script>
+  <title>The Office ~ Hangman</title>
 </head>
+
 <body>
 
-<!-- Header -->
-<div class="wrapper">
-<header>
-        <img id="logo" src="assets/images/theoffice.png" alt="The Office Logo">
-        <h1>The Office Hangman</h1>
-        <hr id="hrHeader">
-</header>
+  <div class="jumbotron">
+    <h1 class="display-2 mt-0">The Office</h1>
+    <h2 class="">Hangman</h3>
+  </div>
 
-<!-- Page content -->
-    <div class="container rounded">
-        <div class="row row-cols-3" id="main">
-            <!-- Column One -->
-            <div class="col" id="colOne"><img id="pageImage" src="assets/images/office07.png"></div>
-            <!-- Column Two -->
-            <div class="col" id="colTwo"><h5>Game Stats</h5>
-            <hr>
-                <div class="row">Wins: </div>
-                <div class="row" id="wins"></div>
-                <hr>
-                <div class="row">Losses: </div>
-                <div class="row" id="losses"></div>
-                <hr>
-                <div class="row">Lives Left: </div>
-                <div class="row" id="livesLeft"></div>
-                <hr>
-            </div>
-            <!-- Column Three -->
-            <div class="col" id="colThree"><h5>Press any letter on your keyboard to start!</h5>
-            <hr>
-                <div class="row" id="randomWord"></div>
-                <hr>
-                <div class="row">Letters Guessed: </div>
-                <div class="row" id="lettersGuessed"></div>
-            </div>
+  <!-- The Modal -->
+  <div class="modal fade" id="gameOverModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title"></h1>
+          <!-- <button type="button" class="close" data-dismiss="modal">×</button> -->
         </div>
-        <div class="row"></div>
+
+        <!-- Modal body -->
+        <div class="modal-body" id="modalBody"></div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger playAgain newGame" data-dismiss="modal"></button>
+        </div>
+
+      </div>
     </div>
-</div> <!--End of .wrapper-->
+  </div>
 
-<footer>
-</footer>
+  <div id="stats">
+    <ul>
+      <li id="wins"></li>
+      <li id="losses"></li>
+      <li id="livesLeft"></li>
+    </ul>
+  </div>
 
-<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="assets/javascript/game.js"></script>
+  <div class="container-fluid">
+    
+    <div class="container container-lg text-center" id="startArea">
+      <button id="startBtn" class="btn btn-lg btn-block startBtn">Click Here to Start!</button>
+      <!-- <button id="newGameBtn" class="btn btn-light">Play Again!</button> -->
+      <!-- <button id="resetStatsBtn" class="btn btn-light">Reset Stats</button> -->
+
+      <img class="office-image mt-2" src="assets/images/officehangman.png">
+    </div>
+  
+    <div id="gameContainer" class="container mt-2">
+      <div id="wordContainer">
+        <ul></ul>
+      </div>
+      <div id="alphabetContainer" class="mt-2"></div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
 </body>
 </html>
