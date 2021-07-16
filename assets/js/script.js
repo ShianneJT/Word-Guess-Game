@@ -7,20 +7,20 @@ let gameWon = false;
 
 $("#newGameBtn").hide();
 $("#gameContainer").hide();
-$("#wins").html("<span>Wins: " + wins + "</span>");
-$("#losses").html("<span>Losses: " + losses + "</span>");
-$("#livesLeft").html("<span>Lives Remaining: " + lives + "</span>");
+$("#wins").html("<span><strong>Wins: </strong>" + wins + "</span>");
+$("#losses").html("<span><strong>Losses: </strong>" + losses + "</span>");
+$("#livesLeft").html("<span><strong>Lives: </strong>" + lives + "</span>");
 
 
 const startGame = () => {
-  $("#startArea").hide();
+  $(".startArea").hide();
   $("#gameContainer div").empty();
 
   const officeCharacters = ["Michael Scott", "Pam Beesly", "Jim Halpert", "Dwight Schrute",
     "Stanley Hudson", "Kevin Malone", "Angela Martin", "Phyllis Vance",
     "Meredith Palmer", "Creed Bratton", "Oscar Martinez", "Ryan Howard", "Kelly Kapoor", "Andy Bernard",
     "Toby Flenderson", "Darryl Philbin", "Jan Levinson", "David Wallace", "Robert California",
-    "Holly Flax", "Todd Packer"]; //"Bob Vance of Vance Refrigeration, Mose"
+    "Holly Flax", "Todd Packer"];
 
   // grab random character
   let randomCharacterName = officeCharacters[Math.floor(Math.random() * officeCharacters.length)];
@@ -34,14 +34,13 @@ const startGame = () => {
       let letterButton = $("<button onclick='this.disabled = true;'>");
       letterButton.text(char);
       letterButton.val(char);
-      letterButton.addClass("btn btn-lg m-2 letterBtn");
-      // letterButton.addClass("btn btn-primary btn-lg m-2 letterBtn");
+      letterButton.addClass("btn btn-lg m-2 letterBtn primaryButton");
       $("#alphabetContainer").append($(letterButton));
     };
   };
 
+  // display the random character to the dom with letters hidden
   const displayCharacter = () => {
-    // display the random character to the dom with letters hidden
     const hiddenWordDisplay = randomCharacter.split("");
 
     for (let i = 0; i < hiddenWordDisplay.length; i++) {
@@ -120,6 +119,7 @@ const startGame = () => {
     };
   };
 
+  /* Game over modal */
   const displayGifs = () => {
     $("#modalBody").empty();
  
@@ -145,9 +145,8 @@ const startGame = () => {
 };
 
 // handle button click
-$(".startBtn, .playAgain").click(function () {
+$("#startBtn, .playAgain").click(function () {
   lives = 10;
-  $("#livesLeft").html("<span>Lives Remaining: " + lives + "</span>");
   startGame();
 });
 
