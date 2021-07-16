@@ -22,7 +22,25 @@
 
 		<main class="mt-4">
 			<div class="startArea">
-				<img class="office-image mt-2" src="assets/images/officehangman.png" />
+				<!-- <img class="office-image mt-2" src="assets/images/officehangman.png" /> -->
+
+				<picture>
+					<img
+						class="office-image"
+						sizes="(max-width: 1600px) 100vw, 1600px"
+						srcset="
+							officehangman_lgnhz0_c_scale,w_300.png   300w,
+							officehangman_lgnhz0_c_scale,w_714.png   714w,
+							officehangman_lgnhz0_c_scale,w_982.png   982w,
+							officehangman_lgnhz0_c_scale,w_1224.png 1224w,
+							officehangman_lgnhz0_c_scale,w_1422.png 1422w,
+							officehangman_lgnhz0_c_scale,w_1600.png 1600w
+						"
+						src="officehangman_lgnhz0_c_scale,w_1600.png"
+						alt=""
+					/>
+				</picture>
+
 				<button id="startBtn" class="btn btn-lg btn-block primaryButton primaryText">
 					Click Here to Start!
 				</button>
