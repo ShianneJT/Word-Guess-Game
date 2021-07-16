@@ -1,80 +1,104 @@
-/*
-
-* {
-    box-sizing: border-box;
+:root {
+	--color-primary: #afdbf6;
+	--box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+	--bold-text: 600;
 }
 
-*/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
 
 body {
-    background-image: url("../images/exclusive_paper.png");
+	background-image: url("../images/exclusive_paper.png");
+	font-family: "Zilla Slab", Times, "Times New Roman", Georgia, serif;
+	line-height: 1.5;
 }
 
-
 .jumbotron {
-    max-height: 300px;
-    margin-bottom: 0px;
-    padding: 2rem;
-    background-color: #afdbf6;
+	background-color: var(--color-primary);
+	box-shadow: var(--box-shadow);
+	margin-bottom: 1rem;
+}
+
+/* Text */
+
+.boldText {
+	font-weight: var(--bold-text);
+}
+
+.primaryText {
+	font-size: 2rem;
+}
+
+h1,
+h2 {
+	text-align: center;
 }
 
 h1 {
-    letter-spacing: 2px
-
+	font-size: 3.6rem;
+	letter-spacing: 2px;
 }
 
-h1, h2 {
-    font-family: 'Zilla Slab', serif;
-    text-align: center;
+h2 {
+	font-size: 2.5rem;
+	letter-spacing: 1.5px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+/* Buttons */
+
+.primaryButton {
+	background-color: var(--color-primary);
+	border-radius: 4px;
+	box-shadow: var(--box-shadow);
+	font-size: 1.8rem;
+	font-weight: var(--bold-text);
+	transition: transform 0.2s ease-out;
 }
 
-li {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
+.primaryButton:hover {
+	background: rgb(175, 219, 246, 0.4);
 }
 
-.game-area {
-    /* position: relative; */
-    font-size: 20px;
-    letter-spacing: 3px;
+#startBtn {
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 2rem;
 }
 
-.startBtn {
-    /* position: absolute;
-    left: 50%; */
-    background-color: #afdbf6;
-    margin-top: 20px;
-    font-weight: 500;
-}
+/*  */
 
-.office-image {
-    max-width: 90%;
+.stats-container {
+	border: 1px solid #999;
+	border-left: 0;
+	border-right: 0;
+	display: flex;
+	justify-content: space-evenly;
+	list-style-type: none;
+	margin: 2rem;
+	padding: 0;
 }
 
 #wordContainer {
-    font-size: 20px;
-    font-weight: bold;
+	text-align: center;
+	margin: 1rem 0 2rem 0;
 }
 
-.letterBtn {
-    background-color: #afdbf6;
-    font-size: 20px;
-    font-weight: bold;
+#alphabetContainer {
+	width: 98%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 }
 
-.letterBtn:disabled {
-    background-color: white;
-    font-weight: normal;
+/*  */
+
+img {
+	width: 100%;
 }
