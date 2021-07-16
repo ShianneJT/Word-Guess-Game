@@ -84,7 +84,7 @@ const startGame = () => {
       };
     } else {
       lives--;
-      $("#livesLeft").html("<span>Lives Remaining: " + lives + "</span>");
+      $("#livesLeft").html("<span><strong>Lives:</strong> " + lives + "</span>");
       if (lives === 0) {
       };
     };
@@ -95,12 +95,12 @@ const startGame = () => {
     if (lives == 0) {
       losses++;
       gameWon = false;
-      $("#losses").html("<span>Losses: " + losses + "</span>");
+      $("#losses").html("<span><strong>Losses:</strong> " + losses + "</span>");
       launchModal();
     } else if (lives > 0 && lettersRemaining == 0) {
       wins++;
       gameWon = true;
-      $("#wins").html("<span>Wins: " + wins + "</span>");
+      $("#wins").html("<span><strong>Wins:</strong> " + wins + "</span>");
       launchModal();
     };
   };
@@ -147,6 +147,7 @@ const startGame = () => {
 // handle button click
 $("#startBtn, .playAgain").click(function () {
   lives = 10;
+  $("#livesLeft").html("<span><strong>Lives:</strong> " + lives + "</span>");
   startGame();
 });
 

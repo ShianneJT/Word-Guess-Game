@@ -115,11 +115,6 @@ img {
 }
 
 @media screen and (min-width: 1400px) {
-	/* .office-image {
-		max-height: 68vh;
-		margin: auto;
-	} */
-
 	#alphabetContainer {
 		max-width: 60vw;
 		font-size: 6rem;
