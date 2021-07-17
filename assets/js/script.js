@@ -5,7 +5,6 @@ let lives = 10;
 let lettersArray = [];
 let gameWon = false;
 
-$("#newGameBtn").hide();
 $("#gameContainer").hide();
 $("#wins").html("<span><strong>Wins: </strong>" + wins + "</span>");
 $("#losses").html("<span><strong>Losses: </strong>" + losses + "</span>");
@@ -21,12 +20,12 @@ const startGame = () => {
     "Meredith Palmer", "Creed Bratton", "Oscar Martinez", "Ryan Howard", "Kelly Kapoor", "Andy Bernard",
     "Toby Flenderson", "Darryl Philbin", "Jan Levinson", "David Wallace", "Robert California",
     "Holly Flax", "Todd Packer"];
-
+    
   // grab random character
   let randomCharacterName = officeCharacters[Math.floor(Math.random() * officeCharacters.length)];
   let randomCharacter = randomCharacterName.toUpperCase();
 
-  // create alphabet buttons
+  // create letter buttons
   const createButtons = () => {
     for (let i = 0; i < 26; i++) {
       let char = String.fromCharCode(65 + i);
