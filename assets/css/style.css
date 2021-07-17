@@ -26,6 +26,15 @@ body {
 	margin-bottom: 1rem;
 }
 
+.gitHubIcon {
+	float: right;
+	/* height: 32px;
+	width: 32px; */
+	height: 2rem;
+	width: 2rem;
+	margin-top: -1.5rem;
+}
+
 /* Text */
 
 .boldText {
@@ -101,6 +110,15 @@ h2 {
 
 img {
 	width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+	.gitHubIcon {
+		float: right;
+		height: 4rem;
+		width: 4rem;
+		margin-top: -1.5rem;
+	}
 }
 
 @media screen and (min-width: 1024px) {
