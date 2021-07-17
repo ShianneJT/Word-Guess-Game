@@ -15,9 +15,8 @@ https://shiannejt.github.io/Word-Guess-Game/
 
 #### Desktop :desktop_computer:
 
-<img src="assets/images/office-demo.gif"  style="width: 80%">
 <img src="assets/images/desktop.png"      style="width: 80%">
-<img src="assets/images/desktop2.PNG"     style="width: 80%">
+<img src="assets/images/office-demo.gif"  style="width: 80%">
 
 #### Mobile :iphone:
 
