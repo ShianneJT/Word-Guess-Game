@@ -104,9 +104,14 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-	.office-image {
-		max-height: 68vh;
+	.startArea {
+		max-width: 1000px;
 		margin: auto;
+	}
+
+	.office-image {
+		display: block;
+		max-height: 60vh;
 	}
 
 	#alphabetContainer {
