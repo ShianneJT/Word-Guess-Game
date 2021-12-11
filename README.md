@@ -1,6 +1,6 @@
 # Word-Guess-Game - The Office Theme
 
-Classic Hangman featuring characters from the Office.
+Classic Hangman featuring characters from The Office.
 
 https://shiannejt.github.io/Word-Guess-Game/
 
